@@ -1,11 +1,12 @@
 import React from 'react';
-import Row from './Ball';
+import Ball from './Ball';
 import './Row.css';
 
 export default function Row() {
   return (
     <section className='Row'>
-        <Row val={7}/>
+        <Ball val={'21'} color={'blue'}/>
+        <Ball val={'7'} color={'red'}/>
     </section>
   )
 }
