@@ -1,10 +1,9 @@
 import './Ball.css';
 
-export default function Ball({val, color}) {
-  console.log(val);
+export default function Ball({val, color, textColor='#006CA5'}) {
   return (
     <div className='Ball' style={{backgroundColor: color}}>
-      {val}
+      <span style={{color: textColor}}>{val}</span>
     </div>
   )
 }
