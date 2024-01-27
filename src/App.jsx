@@ -1,12 +1,12 @@
 import './App.css';
-import Row from './components/Row';
+import Board from './components/Board';
 
 function App() {
 
   return (
     <>
       <h1>Lotto-Gen</h1>
-      <Row/>
+      <Board/>
     </>
   )
 }
