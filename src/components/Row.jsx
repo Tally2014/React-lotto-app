@@ -16,7 +16,7 @@ export default function Row({numbers=6, isBonus=true, maxNumber=52, bonusMax=20}
   return (
     <section className='Row'>
         {balls.map((v,i) => <Ball key={i} val={v}/>) /*Render Random Balls*/} 
-        {isBonus && <Ball val={bonus} color={'#006CA5'} textColor={'#02367b'}/> /*Render Random Balls*/}
+        {isBonus && <Ball val={bonus} color={'#006CA5'} textColor={'#02367b'}/> /*Render Bonus Ball*/}
     </section>
   )
 }
