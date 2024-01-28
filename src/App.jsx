@@ -13,15 +13,39 @@ function App() {
       </div>
     </nav>
     <main>
-      <div className='container'>
-        <div className='left'>
+      <section className='container'>
+        <section className='left'>
+          <div className='randomNum'>
+            <h2>
+              Configurations
+            </h2>
 
-        </div>
-        <div className='middle'>
+          </div>
+            <div className='numConainer'>
+              <div>
+                <p>Rows:</p>
+                <input type='number' value={6}/>
+              </div>
+              <div>
+                <p>Max Random Number:</p>
+                <input type='number' value={52}/>
+              </div>
+              <div>
+                <p>Bonus Ball</p>
+                <input type="checkbox" value={true}/>
+              </div>
+              <div>
+                <p>Max bonus Number:</p>
+                <input type='number' value={20}/>
+              </div>
+            </div>
+            <button>Generate</button>
+        </section>
+        <section className='middle'>
           <Board/>
           <Board/>
-        </div>
-      </div>
+        </section>
+      </section>
       
     </main>
       
