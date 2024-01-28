@@ -63,7 +63,7 @@ function App() {
             <button>Generate</button>
         </section>
         <section className='middle'>
-          <Board key={configurations.rows} />
+          <Board settings={configurations}/>
         </section>
       </section>
       
