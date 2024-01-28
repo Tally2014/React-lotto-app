@@ -1,6 +1,8 @@
 import Row from "./Row"
 
 export default function Board() {
+
+
   return (
     <div>
         <Row/>
