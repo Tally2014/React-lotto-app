@@ -10,6 +10,7 @@ function App() {
     maxRandomNumber: 52,
     includeBonusBall: true,
     maxBonusNumber: 20,
+    boards: 1
   });
 
   const handleConfigChange = (key, value) => {
@@ -44,7 +45,7 @@ function App() {
                   onChange={(e) => handleConfigChange('rows', parseInt(e.target.value))}/>
               </div>
               <div>
-                <p>Max Random Number:</p>
+                <p>Max Random #:</p>
                 <input type='number' value={configurations.maxRandomNumber}
                   onChange={(e) => handleConfigChange('maxRandomNumber', parseInt(e.target.value))}/>
               </div>
@@ -54,9 +55,15 @@ function App() {
                   onChange={(e) => handleConfigChange('includeBonusBall', e.target.checked)}/>
               </div>
               <div>
-                <p>Max bonus Number:</p>
+                <p>Max bonus #:</p>
                 <input type='number' value={configurations.maxBonusNumber}
                   onChange={(e) => handleConfigChange('maxBonusNumber', parseInt(e.target.value))}
+                />
+              </div>
+              <div>
+                <p>No. of Boards:</p>
+                <input type='number' value={configurations.boards}
+                  onChange={(e) => handleConfigChange('boards', parseInt(e.target.value))}
                 />
               </div>
             </div>

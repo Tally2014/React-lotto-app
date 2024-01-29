@@ -2,8 +2,7 @@ import Row from "./Row"
 
 export default function Board({settings}) {
     
-    const {rows, maxRandomNumber, includeBonusBall, maxBonusNumber} = settings;
-    console.log(rows);
+    const {rows, maxRandomNumber, includeBonusBall, maxBonusNumber, boards} = settings;
 
   return (
     <div>
