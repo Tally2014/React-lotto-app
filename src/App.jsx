@@ -10,7 +10,7 @@ function App() {
     maxRandomNumber: 52,
     includeBonusBall: true,
     maxBonusNumber: 20,
-    boards: 1
+    boards: 2
   });
 
   const handleConfigChange = (key, value) => {
