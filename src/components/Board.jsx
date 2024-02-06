@@ -24,12 +24,11 @@ export default function Board() {
 
   return (
     <div>
-        <section className='left'>
-          <div className='randomNum'>
+        <section className='config'>
+          <div className='cofigTitle'>
             <h2>
               Configurations
             </h2>
-
           </div>
             <div className='numConainer'>
               <div>

@@ -20,7 +20,7 @@ nav .navbar-container {
   margin-top: 100px;
 }
 
-.left {
+.config {
   flex: 0 0 20%;
   height: auto;
   background-color: #eee;
@@ -36,7 +36,7 @@ nav .navbar-container {
   padding: 20px;
 }
 
-.left button {
+.cofigTitle button {
   margin-top: 1rem;
 }
 
