@@ -3,15 +3,16 @@ import Ball from './Ball';
 import './Row.css';
 import { getRolls } from '../utils';
 
-export default function Row({numbers=6, isBonus=true, maxNumber=52, bonusMax=20}) {
+export default function Row({numbers=5, isBonus=true, maxNumber=52, bonusMax=20, clickCount}) {
     
     const [balls, setBalls] = useState([]); 
-    const [bonus, setBonus] = useState(getRolls(1,bonusMax)); /*Generate Bonus Ball*/
+    const [bonus, setBonus] = useState(getRolls(1,bonusMax)); // Generate Bonus Ball
 
     useEffect(() => {
         const fields = isBonus ? numbers - 1 : numbers;
-        setBalls(getRolls(fields, maxNumber)); /*Generate Random Balls*/
-      }, [numbers, isBonus]);
+        setBalls(getRolls(fields, maxNumber)); // Generate Random Balls
+        setBonus(getRolls(1,bonusMax));
+      }, [numbers, isBonus, maxNumber, bonusMax,clickCount]); //
 
   return (
     <section className='Row'>

@@ -5,13 +5,14 @@ import './Board.css';
 export default function Board() {
     
   const [configurations, setConfigurations] = useState({
-    rows: 6,
+    rows: 5,
     maxRandomNumber: 52,
     includeBonusBall: true,
     maxBonusNumber: 20,
     boards: 5,
   });
   let [rows, setRows] = useState();
+  const [clickCount, setClickCount] = useState(0);
 
 
   const handleConfigChange = (key, value) => {
@@ -23,6 +24,8 @@ export default function Board() {
 
   function handleGenerate(){
 
+    setClickCount(prevCount => prevCount + 1); // Increment clickCount on each click
+
     // Generate an array of length equal to the number of boards
     const boardIndexes = Array.from({ length: configurations.boards }, (_, index) => index);
     setRows(<div>
@@ -31,8 +34,8 @@ export default function Board() {
               numbers={configurations.rows} 
               isBonus={configurations.includeBonusBall}
               maxNumber={configurations.maxRandomNumber}
-              bonusMax={configurations.maxBonusNumber}/>
-
+              bonusMax={configurations.maxBonusNumber}
+              clickCount={clickCount}/> // Pass clickCount as a prop/>
       ))}
     </div>)
   }
