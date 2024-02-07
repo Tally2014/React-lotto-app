@@ -16,9 +16,7 @@ function App() {
     </nav>
     <main>
       <section className='container'>
-        <section className='middle'>
-          <Board/>
-        </section>
+        <Board/>
       </section>
       
     </main>

@@ -30,21 +30,15 @@ nav .navbar-container {
   color: #222;
 }
 
-.middle {
-  flex: 1;
-  overflow-y: auto;
-  padding: 20px;
-}
-
 .cofigTitle button {
   margin-top: 1rem;
 }
 
-.numConainer {
+.configContainer {
   display: flex;
   justify-content: space-between;
 }
 
-.numConainer div input {
+.configContainer div input {
   width: 60px;
 }

@@ -1,0 +1,13 @@
+.configContainer div {
+  display: flex;
+  align-items: center;
+}
+
+.configContainer div input {
+  border: none;
+  border-radius: 5px;
+  margin-left: 5px;
+  font-size: 18px;
+  text-align: center;
+  height: 80%;
+}

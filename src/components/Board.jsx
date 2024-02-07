@@ -29,8 +29,9 @@ export default function Board() {
             <h2>
               Configurations
             </h2>
+            <hr />
           </div>
-            <div className='numConainer'>
+            <div className='configContainer'>
               <div>
                 <p>Rows:</p>
                 <input type='number' value={configurations.rows}
@@ -59,6 +60,7 @@ export default function Board() {
                 />
               </div>
             </div>
+            <hr />
             <button>Generate</button>
         </section>
         <section>
