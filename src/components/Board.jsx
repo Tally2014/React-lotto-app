@@ -9,8 +9,10 @@ export default function Board() {
     maxRandomNumber: 52,
     includeBonusBall: true,
     maxBonusNumber: 20,
-    boards: 2
+    boards: 5,
   });
+  let [rows, setRows] = useState();
+
 
   const handleConfigChange = (key, value) => {
     setConfigurations((prevConfig) => ({
@@ -18,22 +20,36 @@ export default function Board() {
       [key]: value,
     }));
   };
-    
-    // Create an array with 'boards' number of elements and map each element to a Row component
-    const rowComponents = [...Array(configurations.boards)].map((_, index) => <Row key={index} />);
+
+  function handleGenerate(){
+
+    // Generate an array of length equal to the number of boards
+    const boardIndexes = Array.from({ length: configurations.boards }, (_, index) => index);
+    setRows(<div>
+      {boardIndexes.map(index => (
+        <Row key={index} 
+              numbers={configurations.rows} 
+              isBonus={configurations.includeBonusBall}
+              maxNumber={configurations.maxRandomNumber}
+              bonusMax={configurations.maxBonusNumber}/>
+
+      ))}
+    </div>)
+  }
+  
 
   return (
     <div>
         <section className='config'>
           <div className='cofigTitle'>
             <h2>
-              Configurations
+              Generate 
             </h2>
             <hr />
           </div>
             <div className='configContainer'>
               <div>
-                <p>Rows:</p>
+                <p>Balls #:</p>
                 <input type='number' value={configurations.rows}
                   onChange={(e) => handleConfigChange('rows', parseInt(e.target.value))}/>
               </div>
@@ -61,10 +77,10 @@ export default function Board() {
               </div>
             </div>
             <hr />
-            <button>Generate</button>
+            <button onClick={handleGenerate}>Generate</button>
         </section>
         <section>
-          {rowComponents}
+          {rows}
         </section>      
     </div>
   )
