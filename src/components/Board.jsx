@@ -5,11 +5,11 @@ import './Board.css';
 export default function Board() {
     
   const [configurations, setConfigurations] = useState({
-    rows: 5,
+    rows: 6,
     maxRandomNumber: 52,
     includeBonusBall: true,
     maxBonusNumber: 20,
-    boards: 5,
+    boards: 3,
   });
   let [rows, setRows] = useState();
   const [clickCount, setClickCount] = useState(0);
@@ -46,11 +46,11 @@ export default function Board() {
         <section className='config'>
           <div className='cofigTitle'>
             <h2>
-              Generate 
+              Configure Lucky Numbers
             </h2>
             <hr />
           </div>
-            <div className='configContainer'>
+            <div className='configOptions'>
               <div>
                 <p>Balls #:</p>
                 <input type='number' value={configurations.rows}

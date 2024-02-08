@@ -1,13 +1,33 @@
-.configContainer div {
+.config {
+  flex: 0 0 20%;
+  height: auto;
+  background-color: #eee;
+  border-radius: 10px;
+  margin-left: 20px;
+  padding: 20px;
+  color: #222;
+}
+
+.cofigTitle button {
+  margin-top: 1rem;
+}
+
+.configOptions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.configOptions div {
   display: flex;
   align-items: center;
 }
 
-.configContainer div input {
+.configOptions div input {
   border: none;
   border-radius: 5px;
   margin-left: 5px;
   font-size: 18px;
   text-align: center;
   height: 80%;
+  width: 60px;
 }

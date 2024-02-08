@@ -19,26 +19,3 @@ nav .navbar-container {
   height: 100vh;
   margin-top: 100px;
 }
-
-.config {
-  flex: 0 0 20%;
-  height: auto;
-  background-color: #eee;
-  border-radius: 10px;
-  margin-left: 20px;
-  padding: 20px;
-  color: #222;
-}
-
-.cofigTitle button {
-  margin-top: 1rem;
-}
-
-.configContainer {
-  display: flex;
-  justify-content: space-between;
-}
-
-.configContainer div input {
-  width: 60px;
-}
