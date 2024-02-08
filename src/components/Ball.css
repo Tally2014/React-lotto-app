@@ -11,7 +11,6 @@
   font-weight: bold;
   font-size: 1.5rem;
   position: relative; /* Added to position the inner circle */
-  z-index: -1;
 }
 
 /* Added an inner circle */
@@ -26,13 +25,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: -1;
 }
 
-/* Added a new rule for the text */
 .Ball span {
   display: block;
   text-align: center;
   font-weight: bold;
   font-size: 1.5rem;
+  position: relative;
 }

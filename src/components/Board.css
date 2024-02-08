@@ -8,10 +8,6 @@
   color: #222;
 }
 
-.cofigTitle button {
-  margin-top: 1rem;
-}
-
 .configOptions {
   display: flex;
   justify-content: space-between;
